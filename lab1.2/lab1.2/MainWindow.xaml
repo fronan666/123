@@ -1,0 +1,31 @@
+﻿<Window x:Class="lab1._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab1._2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="202.8" Width="203.6">
+    
+    <Grid>
+        <Calendar>
+            <Calendar.CalendarDayButtonStyle>
+                <Style TargetType="CalendarDayButton">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding DayOfWeek}" Value="Saturday">
+                            <Setter Property="Foreground" Value="#FF0000"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Background" Value="#FFF0F0"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding DayOfWeek}" Value="Sunday">
+                            <Setter Property="Foreground" Value="#FF0000"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Background" Value="#FFF0F0"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Calendar.CalendarDayButtonStyle>
+        </Calendar>
+    </Grid>
+
+</Window>
